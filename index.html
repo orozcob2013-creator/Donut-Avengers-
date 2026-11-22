@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Donut Avengers</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header><div class="brand">🍩 DONUT <span>AVENGERS</span></div><div class="tag">DONUT SMP • VIRTUAL COINS</div></header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">WELCOME TO THE ARENA</p>
+      <h1>Play for <em>Donut Coins.</em></h1>
+      <p class="muted">A community-style virtual coin game hub.</p>
+    </section>
+
+    <section id="auth" class="panel">
+      <h2>Sign in or create an account</h2>
+      <form id="authForm">
+        <label>Username<input id="username" autocomplete="username" minlength="3" maxlength="20" required></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" minlength="8" required></label>
+        <div class="row"><button type="submit">Sign in</button><button type="button" class="secondary" id="signup">Create account</button></div>
+      </form>
+      <p id="authMessage" class="message"></p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="panel wallet">
+        <div><p class="eyebrow">YOUR BALANCE</p><div class="balance" id="balance">0</div><p class="muted">Donut Coins</p></div>
+        <button class="secondary small" id="logout">Sign out</button>
+      </div>
+      <div class="grid">
+        <section class="panel">
+          <h2>🪙 Coinflip</h2><p class="muted">Virtual coins only. Server determines the result.</p>
+          <label>Bet amount<input id="bet" type="number" min="10000" step="1000" value="10000"></label>
+          <button id="flip">Flip coin</button><p id="gameMessage" class="message"></p>
+        </section>
+        <section class="panel">
+          <h2>📥 Deposit request</h2>
+          <p class="muted">Submit a request for manual review. Sending a Minecraft payment does not automatically add coins.</p>
+          <label>Amount<input id="depositAmount" type="number" min="10000" value="10000"></label>
+          <label>Minecraft username<input id="depositName" maxlength="16" placeholder="Your Minecraft name"></label>
+          <button id="deposit">Submit deposit request</button>
+        </section>
+        <section class="panel">
+          <h2>📤 Withdrawal request</h2>
+          <p class="muted">Requests are reviewed manually. No automatic Minecraft transfer is connected.</p>
+          <label>Amount<input id="withdrawAmount" type="number" min="10000" value="10000"></label>
+          <label>Minecraft username<input id="withdrawName" maxlength="16" placeholder="Your Minecraft name"></label>
+          <button id="withdraw">Submit withdrawal request</button>
+          <p id="requestMessage" class="message"></p>
+        </section>
+        <section class="panel">
+          <h2>📜 Recent activity</h2><div id="transactions" class="muted">No activity yet.</div>
+        </section>
+      </div>
+    </section>
+    <p class="disclaimer">Demo project: virtual coins only. No real-money payments, cash-outs, or automatic Minecraft payment verification. Deposits and withdrawals require a trusted human review process.</p>
+  </main>
+  <script src="/app.js"></script>
+</body></html>
